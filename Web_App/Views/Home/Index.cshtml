@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Log in</h1>
+    <div class="login-container">
+        <form action="/login" method="http://localhost:5289">
+            <label for="username"><b>Username</b></label>
+            <input type="email" placeholder="Enter Username" name="username" required>
+           
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+         
+            <button type="submit">Login</button>
+        </form>
+    </div>
+ 
+</div>
+
+
+<style>
+  h1 {
+      color:black
+  }
+  .login-container{
+      width: 300px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+ form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; 
+  }
+
+  input[type="email"], input[type="password"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius:10px  
+  }
+
+  button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius:10px
+  }
+
+  button:hover {
+      background-color: #45a049;
+  }
+
+    .error-message {
+        color: red;
+        font-size: 12px;
+    }
+
+ 
+</style>
